@@ -1,0 +1,18 @@
+﻿[package]
+name = "kilo8"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.95"
+license = "MIT"
+description = "A clean-room CHIP-8 virtual machine and emulator written in Rust"
+
+[features]
+default = ["desktop", "audio"]
+desktop = ["dep:eframe", "dep:rfd"]
+audio = ["desktop", "dep:rodio"]
+
+[dependencies]
+eframe = { version = "0.37", optional = true, default-features = false, features = ["default_fonts", "glow", "x11", "wayland"] }
+rfd = { version = "0.18", optional = true }
+rodio = { version = "0.23", optional = true, default-features = false, features = ["playback"] }
+rand = "0.9"

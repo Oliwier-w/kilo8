@@ -1,0 +1,6 @@
+/target
+*.ch8
+*.bin
+*.rom
+*.dmp
+*.core
